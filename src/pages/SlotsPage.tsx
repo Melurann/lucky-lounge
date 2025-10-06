@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useBalance } from "../context/BalanceContext";
+import { RuleCard } from "../components/RuleCard";
 
 const SYMBOLS = ["🍒", "🍋", "🍊", "🍇", "⭐", "💎", "7️⃣"];
 
@@ -134,13 +135,8 @@ export const SlotsPage = () => {
       </div>
 
       <div className="text-center mt-8">
-        <div className="card inline-block">
-          <h3 className="text-xl font-bold text-yellow-400 mb-2">Payouts</h3>
-          <div className="text-sm text-gray-300 space-y-1">
-            <p>🎰 Three of a kind: 10x bet</p>
-            <p>✨ Two of a kind: 2x bet</p>
-            <p>💎 Three diamonds: MEGA JACKPOT!</p>
-          </div>
+        <div className="flex justify-center">
+          <RuleCard game="slots" />
         </div>
       </div>
     </div>

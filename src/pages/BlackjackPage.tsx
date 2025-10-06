@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useBalance } from "../context/BalanceContext";
+import { RuleCard } from "../components/RuleCard";
 
 type Card = { suit: string; value: string; numValue: number };
 
@@ -438,29 +439,8 @@ export const BlackjackPage = () => {
 
       {/* Game Rules */}
       <div className="text-center mt-12">
-        <div className="card inline-block max-w-2xl">
-          <h3 className="text-xl font-bold text-yellow-400 mb-3">
-            Rules & Payouts
-          </h3>
-          <div className="text-sm text-gray-300 space-y-2 text-left">
-            <p>
-              🎰 <strong>Blackjack (21 with 2 cards):</strong> Pays 2.5x your
-              bet!
-            </p>
-            <p>
-              🎊 <strong>Win:</strong> Pays 2x your bet (double your money)
-            </p>
-            <p>
-              🤝 <strong>Push (Tie):</strong> Your bet is returned
-            </p>
-            <p>
-              💰 <strong>Double Down:</strong> Double your bet, take 1 card,
-              then stand
-            </p>
-            <p>
-              📋 <strong>Dealer:</strong> Must hit on 16 or less, stands on 17+
-            </p>
-          </div>
+        <div className="flex justify-center">
+          <RuleCard game="blackjack" />
         </div>
       </div>
     </div>
